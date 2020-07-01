@@ -77,7 +77,7 @@
 # Run a quick test to verify the site is working
 - hosts: webservers
   vars:
-    inventory_hostname: xx.xx.xxx.xxx
+    inventory_hostname: 52.14.107.204
   tasks:
   - name: get url
     get_url:
