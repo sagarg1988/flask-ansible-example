@@ -5,6 +5,6 @@
 
 [webservers:vars]
 # Local variables for Ansible playbooks
-ansible_ssh_user=science
-github_user=brennv
+ansible_ssh_user=ubuntu
+github_user=sagarg1988
 app_name=flask-ansible-example  # aligned with github repo name
