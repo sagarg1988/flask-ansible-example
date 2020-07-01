@@ -3,7 +3,7 @@ Description=Gunicorn instance to serve flask-ansible-example
 After=network.target
 
 [Service]
-User=ubuntu
+User=root
 Group=www-data
 WorkingDirectory=/home/ubuntu/flask-ansible-example
 Environment="PATH=/home/ubuntu/flask-ansible-example/env/bin"
