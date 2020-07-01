@@ -8,7 +8,6 @@
   - name: install packages
     apt: name={{item}} state=present
     with_items:
-      - tree         # Optional
       - python-pip   # Optional
       - python-dev   # Optional
       - python3-pip
