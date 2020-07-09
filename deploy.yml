@@ -86,5 +86,5 @@
     shell: cat /tmp/index.html
     register: html_contents
   - name: check for string in html
-    when: html_contents.stdout.find('hello') != -1
+    when: html_contents.stdout.find('HI') != -1
     debug: msg="success!"
