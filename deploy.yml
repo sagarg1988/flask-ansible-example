@@ -36,7 +36,7 @@
     pip:
       requirements: /home/{{ ansible_ssh_user }}/{{ app_name }}/requirements.txt
       virtualenv: /home/{{ ansible_ssh_user }}/{{ app_name }}/env
-      virtualenv_python: python3.5
+      virtualenv_python: python3.6
 
 # Configure app systemd service and nginx
 - hosts: webservers
@@ -76,7 +76,7 @@
 # Run a quick test to verify the site is working
 - hosts: webservers
   vars:
-    inventory_hostname: 52.14.107.204
+    inventory_hostname: 3.21.98.219
   tasks:
   - name: get url
     get_url:
@@ -86,5 +86,5 @@
     shell: cat /tmp/index.html
     register: html_contents
   - name: check for string in html
-    when: html_contents.stdout.find('HI') != -1
-    debug: msg="success!"
+    when: html_contents.stdout.find('This is server 1') != -1
+    debug: msg="success"  
